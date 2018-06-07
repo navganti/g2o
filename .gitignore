@@ -3,3 +3,6 @@ lib
 bin
 .vs
 .vscode
+*.idea
+cmake-build-debug
+
