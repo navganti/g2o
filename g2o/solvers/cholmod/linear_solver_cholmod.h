@@ -33,7 +33,7 @@
 #include "g2o/stuff/timeutil.h"
 #include "g2o/stuff/sparse_helper.h"
 
-#include <cholmod.h>
+#include <suitesparse/cholmod.h>
 
 namespace g2o {
 
