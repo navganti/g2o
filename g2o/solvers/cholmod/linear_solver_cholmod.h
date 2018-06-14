@@ -76,6 +76,8 @@ template <typename MatrixType>
 class LinearSolverCholmod : public LinearSolverCCS<MatrixType>
 {
   public:
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
     LinearSolverCholmod() :
       LinearSolverCCS<MatrixType>()
     {

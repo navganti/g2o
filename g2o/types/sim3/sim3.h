@@ -37,14 +37,13 @@ namespace g2o
 
   struct Sim3
   {
-    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
-
     protected:
       Eigen::Quaterniond r;
       Eigen::Vector3d t;
       double s;
 
     public:
+      EIGEN_MAKE_ALIGNED_OPERATOR_NEW
       Sim3()
       {
         r.setIdentity();

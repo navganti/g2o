@@ -71,6 +71,8 @@ template <typename MatrixType>
 class LinearSolverCSparse : public LinearSolverCCS<MatrixType>
 {
   public:
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
     LinearSolverCSparse() :
       LinearSolverCCS<MatrixType>()
     {

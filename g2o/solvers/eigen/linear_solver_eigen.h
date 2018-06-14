@@ -49,6 +49,8 @@ template <typename MatrixType>
 class LinearSolverEigen: public LinearSolver<MatrixType>
 {
   public:
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
     typedef Eigen::SparseMatrix<double, Eigen::ColMajor> SparseMatrix;
     typedef Eigen::Triplet<double> Triplet;
     typedef Eigen::PermutationMatrix<Eigen::Dynamic, Eigen::Dynamic> PermutationMatrix;
@@ -58,6 +60,8 @@ class LinearSolverEigen: public LinearSolver<MatrixType>
     class CholeskyDecomposition : public Eigen::SimplicialLDLT<SparseMatrix, Eigen::Upper>
     {
       public:
+        EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
         CholeskyDecomposition() : Eigen::SimplicialLDLT<SparseMatrix, Eigen::Upper>() {}
         using Eigen::SimplicialLDLT< SparseMatrix, Eigen::Upper>::analyzePattern_preordered;
 

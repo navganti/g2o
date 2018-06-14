@@ -46,6 +46,8 @@ namespace g2o {
   class LinearSolverDense : public LinearSolver<MatrixType>
   {
     public:
+      EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
       LinearSolverDense() :
         LinearSolver<MatrixType>(),
         _reset(true)

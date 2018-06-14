@@ -47,6 +47,8 @@ namespace g2o {
   class LinearSolverPCG : public LinearSolver<MatrixType>
   {
     public:
+      EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
       LinearSolverPCG() :
       LinearSolver<MatrixType>()
       {
