@@ -16,17 +16,6 @@ ENDIF(NOT CMAKE_BUILD_TYPE)
 
 MESSAGE(STATUS "BUILD TYPE: " ${CMAKE_BUILD_TYPE})
 
-# postfix, based on type
-SET(CMAKE_DEBUG_POSTFIX "_d" CACHE STRING "postfix applied to debug build of libraries")
-SET(CMAKE_RELEASE_POSTFIX "" CACHE STRING "postfix applied to release build of libraries")
-
-# work out the postfix; required where we use OUTPUT_NAME
-IF(CMAKE_BUILD_TYPE MATCHES Release)
-  SET(EXE_POSTFIX)
-ELSEIF(CMAKE_BUILD_TYPE MATCHES Debug)
-  SET(EXE_POSTFIX ${CMAKE_DEBUG_POSTFIX})
-ENDIF()
-
 # Define g2o as a shared library.
 SET (G2O_LIB_TYPE SHARED)
 
@@ -141,7 +130,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${g2o_CXX_FLAGS}")
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${g2o_C_FLAGS}")
 
 # Find Eigen3
-FIND_PACKAGE(Eigen3 3.1.0 REQUIRED)
+FIND_PACKAGE(Eigen3 REQUIRED)
 
 # Set up the top-level include directories
 INCLUDE_DIRECTORIES(${g2o_SOURCE_DIR} ${EIGEN3_INCLUDE_DIR})

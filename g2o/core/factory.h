@@ -49,7 +49,7 @@ namespace g2o {
   class G2O_CORE_API Factory
   {
     public:
-
+    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
       //! return the instance
       static Factory* instance();
 
@@ -99,6 +99,7 @@ namespace g2o {
       class CreatorInformation
       {
         public:
+          EIGEN_MAKE_ALIGNED_OPERATOR_NEW
           AbstractHyperGraphElementCreator* creator;
           int elementTypeBit;
           CreatorInformation()
