@@ -3,3 +3,5 @@ lib
 bin
 .idea
 cmake-build-*
+g2o/config.h
+
